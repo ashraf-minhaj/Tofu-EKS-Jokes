@@ -1,11 +1,7 @@
-# output "image" {
-#     value = data.aws_ecr_image.service_image.image_tag
-# }
-
-output "subnets" {
-  value = data.aws_subnets.default.ids
+output "endpoint" {
+  value = aws_eks_cluster.cluster.endpoint
 }
 
-# output "lb_dns" {
-#     value = aws_lb.load_balancer.dns_name
-# }
+output "kubeconfig-certificate-authority-data" {
+  value = aws_eks_cluster.cluster.certificate_authority[0].data
+}
