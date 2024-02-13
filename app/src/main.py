@@ -1,3 +1,9 @@
+""" 
+ dada joke API. 
+
+ author: ashraf minhaj
+ email : ashraf_minhaj@yahoo.com
+"""
 from flask import Flask
 import random
 
@@ -28,4 +34,4 @@ def health():
 
 if __name__ == '__main__':
     print("running")
-    app.run(debug=False, port="5005")
+    app.run(debug=False, host='0.0.0.0', port="8080")
