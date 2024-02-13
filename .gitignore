@@ -1,0 +1,9 @@
+infreastructure/Terraform/backend/*
+!infreastructure/Terraform/backend
+!infreastructure/Terraform/backend/*.tfstate
+!infreastructure/Terraform/backend/ecr.tf
+.terraform
+.terraform.*
+app/tag.txt
+# *.tfvars
+terraform.tfstate.backup
