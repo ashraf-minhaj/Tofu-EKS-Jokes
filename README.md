@@ -32,9 +32,9 @@
 ## Infrastructure As Code
 
 ### backend (chicken or the egg)
-- [ ] Create backend with
-  - [ ] states bucket
-  - [ ] ECR registry
+- [x] Create backend with
+  - [x] states bucket
+  - [x] ECR registry
 
 ### Others
 - [ ] 
