@@ -32,6 +32,10 @@ def index():
 def health():
     return "ok"
 
+@app.route('/ready')
+def ready():
+    return "never been more ready"
+
 if __name__ == '__main__':
     print("running")
     app.run(debug=False, host='0.0.0.0', port="8080")
