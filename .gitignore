@@ -1,4 +1,5 @@
 infreastructure/Terraform/backend/*
+infrastructure/OpenTofu/backend.*.conf
 !infreastructure/Terraform/backend
 !infreastructure/Terraform/backend/*.tfstate
 !infreastructure/Terraform/backend/ecr.tf

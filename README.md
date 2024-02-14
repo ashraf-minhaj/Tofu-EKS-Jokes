@@ -14,20 +14,20 @@
 </div>
 
 ## Steps to deploy to EKS Cluster
-- [ ] Create a cluster (Control Plane)
-  - [ ] VPC
-  - [ ] subnets 
-  - [ ] security group
-  - [ ] IAM assume role
+- [x] Create a cluster (Control Plane)
+  - [x] VPC
+  - [x] subnets 
+  - [x] security group
+  - [x] IAM assume role
 
-- [ ] Create a NodeGroup (worker Nodes)
-  - [ ] IAM role
-  - [ ] IAM policy
+- [x] Create a NodeGroup (worker Nodes)
+  - [x] IAM role
+  - [x] IAM policy
   - [ ] Launch Template
 
-- [ ] Deploy Pods
-  - [ ] deployment manifest
-  - [ ] service manifest (type: load balancer)
+- [x] Deploy Pods
+  - [x] deployment manifest
+  - [x] service manifest (type: load balancer)
 
 ## Infrastructure As Code
 

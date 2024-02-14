@@ -30,7 +30,11 @@ resource "aws_subnet" "vpc_sub_az_b" {
 
 # connect to igw
 data "aws_internet_gateway" "vpc_int_gw" {
-  internet_gateway_id = var.internet_gateway
+  # internet_gateway_id = var.internet_gateway
+  filter {
+    name   = "attachment.vpc-id"
+    values = [data.aws_vpc.vpc.id]
+  }
 }
 
 resource "aws_route_table" "route_table" {
