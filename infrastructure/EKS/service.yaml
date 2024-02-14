@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: jokes-service
 
 spec:
   selector:
-    app: nginx
+    app: jokes
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 80   # port of the pods
-  type: LoadBalancer
+    targetPort: 8080   # port of the pods
+  type: LoadBalancer # LoadBalancer - layer 3 as network load balancer, Ingress layer 7
