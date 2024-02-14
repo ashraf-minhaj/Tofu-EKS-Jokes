@@ -11,8 +11,8 @@ resource "aws_eks_cluster" "cluster" {
   role_arn = aws_iam_role.eks_control_plane_role.arn
 
   vpc_config {
-    endpoint_private_access = true
-    endpoint_public_access  = true
+    endpoint_private_access = true # Whether the Amazon EKS private API server endpoint is enabled
+    endpoint_public_access  = true # Whether the Amazon EKS public API server endpoint is enabled.
     subnet_ids              = [aws_subnet.vpc_sub_az_a.id, aws_subnet.vpc_sub_az_b.id]
     public_access_cidrs     = ["0.0.0.0/0"]
     # for the cross-account elastic network interfaces that EKS creates to use 

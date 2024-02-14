@@ -25,9 +25,9 @@
   - [x] IAM policy
   - [ ] Launch Template
 
-- [ ] Deploy Pods
-  - [ ] deployment manifest
-  - [ ] service manifest (type: load balancer)
+- [x] Deploy Pods
+  - [x] deployment manifest
+  - [x] service manifest (type: load balancer)
 
 ## Infrastructure As Code
 
