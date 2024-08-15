@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: jokes-deployment
+  labels:
+    app: jokes
+
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1             # number of pods that can be created above the desired amount during update. default is 25%
+      maxUnavailable: 0       # number of pods that can be unavailable during update. default 25%
+  selector:
+    matchLabels:
+      app: jokes
+  template:
+    metadata:
+      labels:
+        app: jokes
+    spec:
+      containers:
+      - name: jokes
+        image: ashraftheminhaj/jokes:v2
+        ports:
+        - containerPort: 8080
+        readinessProbe:                      # is it ready to accept traffic?
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+        livenessProbe:                       # is the application running? doesn't care abt startupProbe, unless initialDelaySeconds used
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 20
+        startupProbe:                        # is the container started successfully.
+          httpGet:
+            path: /health
+            port: 8080
+          failureThreshold: 30
+          # initialDelaySeconds:
