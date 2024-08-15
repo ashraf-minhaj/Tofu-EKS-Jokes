@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jokes
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jokes
+spec:
+  destination:
+    name: ''
+    namespace: jokes
+    server: https://kubernetes.default.svc
+  source:
+    path: infrastructure/manifests
+    repoURL: https://github.com/ashraf-minhaj/Tofu-EKS-Jokes
+    targetRevision: HEAD
+  sources: []
+  project: default
