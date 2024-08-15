@@ -5,7 +5,7 @@
 
 <!-- ![banner](docs/banner.png) -->
 
-<!-- ![](https://img.shields.io/badge/Terraform-1.3.3-white?style=plastic&logo=terraform)&nbsp; -->
+![](https://img.shields.io/badge/ArgoCD--orange?style=plastic&logo=argo)&nbsp;
 ![](https://img.shields.io/badge/OpenTofu/Terraform-1.8.1-yellow?style=plastic&logo=opentofu)&nbsp;
 ![](https://img.shields.io/badge/docker--blue?style=plastic&logo=docker)&nbsp;
 ![](https://img.shields.io/badge/ECR--orange?style=plastic&logo=ecr)&nbsp;
