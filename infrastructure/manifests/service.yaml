@@ -10,4 +10,4 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8080   # port of the pods
-  type: LoadBalancer # LoadBalancer - layer 3 as network load balancer, Ingress layer 7
+  # type: LoadBalancer # LoadBalancer - layer 3 as network load balancer, Ingress layer 7

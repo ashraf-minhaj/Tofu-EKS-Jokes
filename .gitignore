@@ -8,3 +8,4 @@ infrastructure/OpenTofu/backend.*.conf
 app/tag.txt
 # *.tfvars
 terraform.tfstate.backup
+.DS_Store
