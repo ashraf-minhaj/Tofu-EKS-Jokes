@@ -44,34 +44,12 @@
   ```
   kubectl port-forward -n argocd service/argocd-server 8443:443
   ```
-  Configure you application or you can use a manifest as well -
-  ```yaml
-  apiVersion: v1
-  kind: Namespace
-  metadata:
-    name: jokes
-  ---
-  apiVersion: argoproj.io/v1alpha1
-  kind: Application
-  metadata:
-    name: jokes
-  spec:
-    destination:
-      name: ''
-      namespace: jokes
-      server: https://kubernetes.default.svc
-    source:
-      path: infrastructure/manifests
-      repoURL: https://github.com/ashraf-minhaj/Tofu-EKS-Jokes
-      targetRevision: HEAD
-    sources: []
-    project: default
-
+  Configure you application or you can use a [yaml manifest](/infrastructure/argo/joke_application) as well.
+  You have to be on the argo namespace -
+  ```
+  sudo kubectl config set-context --current --namespace=argocd
   ```
   apply - `kubectl create -f joke_application.yaml`
-
-> on going work.
-
 
 
 
