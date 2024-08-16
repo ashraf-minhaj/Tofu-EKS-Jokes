@@ -9,3 +9,4 @@ app/tag.txt
 # *.tfvars
 terraform.tfstate.backup
 .DS_Store
+.README.md.kate-swp
