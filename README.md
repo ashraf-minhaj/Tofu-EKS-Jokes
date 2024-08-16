@@ -44,7 +44,7 @@
   ```
   kubectl port-forward -n argocd service/argocd-server 8443:443
   ```
-  Configure you application or you can use a [yaml manifest](/infrastructure/argo/joke_application) as well.
+  Configure you application or you can use a [yaml manifest](/infrastructure/argo) as well.
   You have to be on the argo namespace -
   ```
   sudo kubectl config set-context --current --namespace=argocd
