@@ -18,3 +18,8 @@ spec:
     targetRevision: HEAD
   sources: []
   project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+
