@@ -51,6 +51,15 @@
   ```
   apply - `kubectl create -f joke_application.yaml`
 
+<!-- ### 3. Configure ingress
+- Apply nginx ingress manifest -
+  ```
+  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+  ```
+- Check status of pods -
+  ```
+  kubectl get pods -n ingress-nginx
+  ``` -->
 
 
 ## Steps to deploy to EKS Cluster
@@ -63,7 +72,7 @@
 - [x] Create a NodeGroup (worker Nodes)
   - [x] IAM role
   - [x] IAM policy
-  - [ ] Launch Template
+  <!-- - [ ] Launch Template -->
 
 - [x] Deploy Pods
   - [x] deployment manifest
@@ -76,5 +85,5 @@
   - [x] states bucket
   - [x] ECR registry
 
-### Others
-- [ ] 
+<!-- ### Others
+- [ ]  -->
